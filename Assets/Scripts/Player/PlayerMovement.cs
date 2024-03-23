@@ -11,6 +11,11 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log($"Triggered with: {other.gameObject}");
     }
 
+    private void Start()
+    {
+        moveSpeed = 0.01f;
+    }
+
     void Update()
     {
         Move();
