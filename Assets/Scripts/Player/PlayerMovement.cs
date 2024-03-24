@@ -1,16 +1,9 @@
-using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
-    [SerializeField] private Rigidbody collideWithEnemy;
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log($"Triggered with: {other.gameObject}");
-    }
-
+    
     private void Start()
     {
         moveSpeed = 0.01f;

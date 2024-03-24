@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class LocationBuilder : MonoBehaviour
@@ -18,6 +17,7 @@ public class LocationBuilder : MonoBehaviour
         Player.GetComponent<Rigidbody>().useGravity = false;
         Player.GetComponent<BoxCollider>().isTrigger = true;
         Player.AddComponent<PlayerMovement>();
+        Player.AddComponent<TriggerCol>();
         
         GameObject Enemy = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         Enemy.name = "Enemy";
