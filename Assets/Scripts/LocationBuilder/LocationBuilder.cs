@@ -15,7 +15,9 @@ public class LocationBuilder : MonoBehaviour
         Player.GetComponent<MeshRenderer>().material = Resources.Load<Material>("Materials/player_mat");
         Player.AddComponent<Rigidbody>();
         Player.GetComponent<Rigidbody>().useGravity = false;
+        Player.GetComponent<Rigidbody>().isKinematic = true;
         Player.GetComponent<BoxCollider>().isTrigger = true;
+        Player.AddComponent<BoxCollider>();
         Player.AddComponent<PlayerMovement>();
         Player.AddComponent<TriggerCol>();
         
